@@ -26,6 +26,9 @@
 
 </div>
 
+<img width="2732" height="1540" alt="Realtime codebase indexing" src="https://github.com/user-attachments/assets/d5a75962-e8b8-4f87-aad5-448ccee23e53" />
+
+
 
 Build codebase index. CocoIndex provides built-in support for codebase chunking, with native Tree-sitter support. It works with large codebases, and can be updated in near real-time with incremental processing - only reprocess what's changed.
 
