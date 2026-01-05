@@ -1,26 +1,57 @@
-# Build real-time index for codebase
+<p align="center">
+    <img src="https://cocoindex.io/images/github.svg" alt="CocoIndex">
+</p>
+
+<h1 align="center">Build Real-Time Codebase Indexing </br> for [Coding Agents | Code Review Agents | ...]</h1>
+
+<div align="center">
 
 [![GitHub](https://img.shields.io/github/stars/cocoindex-io/cocoindex?color=5B5BD6)](https://github.com/cocoindex-io/cocoindex)
+[![Documentation](https://img.shields.io/badge/Documentation-394e79?logo=readthedocs&logoColor=00B9FF)](https://cocoindex.io/docs/getting_started/quickstart)
+[![License](https://img.shields.io/badge/license-Apache%202.0-5B5BD6?logoColor=white)](https://opensource.org/licenses/Apache-2.0)
+[![PyPI version](https://img.shields.io/pypi/v/cocoindex?color=5B5BD6)](https://pypi.org/project/cocoindex/)
+<!--[![PyPI - Downloads](https://img.shields.io/pypi/dm/cocoindex)](https://pypistats.org/packages/cocoindex) -->
+[![PyPI Downloads](https://static.pepy.tech/badge/cocoindex/month)](https://pepy.tech/projects/cocoindex)
+[![CI](https://github.com/cocoindex-io/cocoindex/actions/workflows/CI.yml/badge.svg?event=push&color=5B5BD6)](https://github.com/cocoindex-io/cocoindex/actions/workflows/CI.yml)
+[![release](https://github.com/cocoindex-io/cocoindex/actions/workflows/release.yml/badge.svg?event=push&color=5B5BD6)](https://github.com/cocoindex-io/cocoindex/actions/workflows/release.yml)
+[![Link Check](https://github.com/cocoindex-io/cocoindex/actions/workflows/links.yml/badge.svg)](https://github.com/cocoindex-io/cocoindex/actions/workflows/links.yml)
+[![Discord](https://img.shields.io/discord/1314801574169673738?logo=discord&color=5B5BD6&logoColor=white)](https://discord.com/invite/zpA9S2DR7s)
 
-CocoIndex provides built-in support for code base chunking, using Tree-sitter to keep syntax boundary. In this example, we will build real-time index for codebase using CocoIndex.
+</div>
 
-We appreciate a star ⭐ at [CocoIndex Github](https://github.com/cocoindex-io/cocoindex) if this is helpful.
+<div align="center">
+  
+[Step By Step Tutorial](https://cocoindex.io/examples/code_index)
+[Youtube](https://youtu.be/G3WstvhHO24?si=Bnxu67Ax5Lv8b-J2)
 
-![Build embedding index for codebase](https://github.com/user-attachments/assets/6dc5ce89-c949-41d4-852f-ad95af163dbd)
+</div>
 
-[Tree-sitter](https://en.wikipedia.org/wiki/Tree-sitter_%28parser_generator%29) is a parser generator tool and an incremental parsing library. It is available in Rust 🦀 - [GitHub](https://github.com/tree-sitter/tree-sitter). CocoIndex has built-in Rust integration with Tree-sitter to efficiently parse code and extract syntax trees for various programming languages. Check out the list of supported languages [here](https://cocoindex.io/docs/ops/functions#splitrecursively) - in the `language` section.
 
-## Tutorials
+Build codebase index. CocoIndex provides built-in support for codebase chunking, with native Tree-sitter support. It works with large codebases, and can be updated in near real-time with incremental processing - only reprocess what's changed.
 
-- Step by step tutorial - Check out the [blog](https://cocoindex.io/blogs/index-code-base-for-rag).
-- Video tutorial - [Youtube](https://youtu.be/G3WstvhHO24?si=Bnxu67Ax5Lv8b-J2).
+## Usecases
+<img width="2732" height="1540" alt="cover" src="https://github.com/user-attachments/assets/5b4bdf75-7e7f-4503-837c-ebe86ec81ddc" />
+
+A wide range of applications can be built with an effective codebase index that is always up-to-date.
+
+- Semantic code context for AI coding agents like Claude, Codex, Gemini CLI.
+- MCP for code editors such as Cursor, Windsurf, and VSCode.
+- Context-aware code search applications—semantic code search, natural language code retrieval.
+- Context for code review agents—AI code review, automated code analysis, code quality checks, pull request summarization.
+- Automated code refactoring, large-scale code migration.
+- SRE workflows: enable rapid root cause analysis, incident response, and change impact assessment by indexing infrastructure-as-code, deployment scripts, and config files for semantic search and lineage tracking.
+- Automatically generate design documentation from code—keep design docs up-to-date.
+
+
 
 ## Steps
 
 ### Indexing Flow
 
 <p align='center'>
-  <img width="434" alt="Screenshot 2025-05-19 at 10 14 36 PM" src="https://github.com/user-attachments/assets/3a506034-698f-480a-b653-22184dae4e14" />
+  
+ <img width="1710" height="1220" alt="flow" src="https://github.com/user-attachments/assets/4134ce8a-f65a-4f0f-9513-1de38bb81c41" />
+
 </p>
 
 1. We will ingest CocoIndex codebase.
@@ -63,6 +94,10 @@ It just connects to your local CocoIndex server, with Zero pipeline data retenti
 ```
 cocoindex server -ci main
 ```
+
+<img width="2087" height="1800" alt="chunk" src="https://github.com/user-attachments/assets/a63e96f6-cfc3-4c82-9552-6d741f36cf9f" />
+
+
 
 Then open the CocoInsight UI at [https://cocoindex.io/cocoinsight](https://cocoindex.io/cocoinsight).
 
